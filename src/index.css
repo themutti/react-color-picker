@@ -1,5 +1,6 @@
-root {
-
+:root {
+  --header-height: 6rem;
+  --bg-primary: #0F9015;
 }
 
 *, *::before, *::after {
@@ -8,4 +9,38 @@ root {
 
 body {
   margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+header, main {
+  width: 100%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+  padding: 0 1rem;
+}
+
+
+header {
+  background-color: var(--bg-primary);
+  height: var(--header-height);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: var(--header-height);
+  justify-content: center;
+}
+
+.header-title {
+  margin: 0 0 0 1rem;
+  font-size: calc(var(--header-height) / 2);
+  font-weight: 500;
+  color: white;
 }
