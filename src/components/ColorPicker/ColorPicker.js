@@ -1,20 +1,24 @@
 import React from "react";
-import ColorButton from "./ColorButton";
-import colors from "../../data/colors";
+import ColorsGrid from "./ColorsGrid";
+import ColorDetails from "./ColorDetails";
+import COLORS from "../../data/colors";
 
 export default class ColorPicker extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      selectedColor: COLORS[0]
+    };
   }
 
   render() {
     return (
       <div className="container">
-        <ul className="colors-list">
-          {colors.map((color) => (
-            <ColorButton key={color.name} color={color} />
-          ))}
-        </ul>
+        <ColorsGrid
+          colors={COLORS}
+          onColorSelect={(color) => this.setState({ selectedColor: color })}
+        />
+        <ColorDetails color={this.state.selectedColor} />
       </div>
     );
   }

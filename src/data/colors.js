@@ -1,18 +1,18 @@
 const colors = [
   {
-    name: "red",
+    name: "Red",
     red: 255,
     green: 0,
     blue: 0
   },
   {
-    name: "green",
+    name: "Green",
     red: 0,
     green: 255,
     blue: 0
   },
   {
-    name: "blue",
+    name: "Blue",
     red: 0,
     green: 0,
     blue: 255
