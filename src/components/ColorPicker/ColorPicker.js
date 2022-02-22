@@ -13,7 +13,7 @@ export default class ColorPicker extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="color-picker container">
         <ColorsGrid
           colors={COLORS}
           onColorSelect={(color) => this.setState({ selectedColor: color })}

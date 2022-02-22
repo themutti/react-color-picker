@@ -16,6 +16,60 @@ const colors = [
     red: 0,
     green: 0,
     blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
+  },
+  {
+    name: "Blue",
+    red: 0,
+    green: 0,
+    blue: 255
   }
 ];
 

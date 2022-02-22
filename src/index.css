@@ -1,6 +1,7 @@
 :root {
-  --header-height: 6rem;
   --bg-primary: #0F9015;
+  --header-height: 6rem;
+  --color-btn-size: 9rem;
 }
 
 *, *::before, *::after {
@@ -28,6 +29,7 @@ header, main {
 header {
   background-color: var(--bg-primary);
   height: var(--header-height);
+  box-shadow: 0 2px 5px #333333;
 }
 
 .header-inner {
@@ -46,23 +48,122 @@ header {
 }
 
 
+.color-picker {
+  display: flex;
+  padding: 3rem 2rem;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.section-title {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  font-size: 4.2vmin;
+  font-weight: 500;
+  text-align: center;
+}
+
+.colors-grid, .color-details {
+  border-radius: 1px;
+  box-shadow: 0 3px 10px #333333;
+  padding: 1rem;
+}
+
+.colors-grid {
+  width: 70%;
+  margin-right: 3rem;
+}
+
 .colors-list {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .color-item {
-  display: inline-block;
-  width: 4.5rem;
-  height: 4.5rem;
-  margin: 0 1rem;
+  position: relative;
+  width: 20%;
+  padding-bottom: 20%;
+  margin: 2%;
 }
 
 .color-btn {
+  position: absolute;
   background-color: white;
   width: 100%;
   height: 100%;
   padding: 0;
   border: none;
+  cursor: pointer;
 }
+
+.color-details {
+  width: 30%;
+}
+
+.color-preview {
+  width: 100%;
+  height: 5rem;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.color-detail {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* @media screen and (min-width: 901px) and (max-width: 1200px) {
+  :root {
+    --color-btn-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  :root {
+    --header-height: 5rem;
+    --color-btn-size: 5rem;
+  }
+} */
+
+@media screen and (max-width: 900px) {
+  :root {
+    --header-height: 5rem;
+    --color-btn-size: 6rem;  
+  }
+  
+  .color-picker {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .colors-grid, .color-details {
+    width: 100%;
+  }
+
+  .colors-grid {
+    margin: 0 0 2rem;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  :root {
+    --header-height: 4rem;
+    --color-btn-size: 3.5rem;  
+  }
+} */
+
+/*
+TODO:
+- scaling e dimensioni;
+- setta colors.js;
+- gradients;
+- outline color-btn selezionato;
+- font-weight;
+*/

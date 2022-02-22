@@ -54,16 +54,16 @@ function ColorGradientsButton(props) {
 
 export default function ColorDetails(props) {
   return (
-    <div>
-      <h2>Selected color</h2>
+    <section className="color-details">
+      <h2 className="section-title">Selected color</h2>
       <div
         style={{ backgroundColor: rgbToRgbStr(props.color) }}
         className="color-preview"
       ></div>
-      <div>{props.color.name}</div>
-      <div>{rgbToRgbStr(props.color)}</div>
-      <div>{rgbToHexStr(props.color)}</div>
-      <div>{rgbToHslStr(props.color)}</div>
-    </div>
+      <div className="color-detail">{props.color.name}</div>
+      <div className="color-detail">{rgbToRgbStr(props.color)}</div>
+      <div className="color-detail">{rgbToHexStr(props.color)}</div>
+      <div className="color-detail">{rgbToHslStr(props.color)}</div>
+    </section>
   );
 }
