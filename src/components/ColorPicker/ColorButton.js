@@ -1,9 +1,13 @@
+import { rgbToRgbStr } from "../../logics/colorConversions";
+
 export default function ColorButton(props) {
+  const c = props.color;
+
   return (
     <li className="color-item">
       <button
         style={{
-          backgroundColor: `rgb(${props.color.red}, ${props.color.green}, ${props.color.blue})`
+          backgroundColor: rgbToRgbStr(c.red, c.green, c.blue)
         }}
         className="color-btn"
         onClick={props.onClick}
