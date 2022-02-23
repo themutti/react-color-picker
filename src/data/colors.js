@@ -6,12 +6,6 @@ const colors = [
     blue: 0
   },
   {
-    name: "White",
-    red: 255,
-    green: 255,
-    blue: 255
-  },
-  {
     name: "Red",
     red: 255,
     green: 0,
@@ -70,6 +64,12 @@ const colors = [
     red: 255,
     green: 0,
     blue: 220
+  },
+  {
+    name: "White",
+    red: 255,
+    green: 255,
+    blue: 255
   }
 ];
 

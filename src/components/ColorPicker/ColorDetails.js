@@ -2,7 +2,12 @@ import { rgbToRgbStr, rgbToHexStr, rgbToHslStr } from "../../logics/colorConvers
 
 function ColorGradientsButton(props) {
   return (
-    <button></button>
+    <button
+      className="gradients-btn"
+      onClick={props.onClick}
+    >
+      { props.isGradients ? "Show all colors" : "Show gradients" }
+    </button>
   );
 }
 
@@ -16,10 +21,14 @@ export default function ColorDetails(props) {
         style={{ backgroundColor: rgbToRgbStr(c.red, c.green, c.blue) }}
         className="color-preview"
       ></div>
-      <div className="color-detail">{c.name}</div>
+      {c.name && <div className="color-detail">{c.name}</div>}
       <div className="color-detail">{rgbToRgbStr(c.red, c.green, c.blue)}</div>
       <div className="color-detail">{rgbToHexStr(c.red, c.green, c.blue)}</div>
       <div className="color-detail">{rgbToHslStr(c.red, c.green, c.blue)}</div>
+      <ColorGradientsButton
+        isGradients={props.isGradients}
+        onClick={props.onGradientsClick}
+      />
     </section>
   );
 }

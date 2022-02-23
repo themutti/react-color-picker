@@ -5,9 +5,9 @@ export default function ColorsGrid(props) {
     <section className="colors-grid">
       <h2 className="section-title">Pick a color</h2>
       <ul className="colors-list">
-        {props.colors.map((color) => (
-          <ColorButton 
-            key={color.name}
+        {props.colors.map((color, i) => (
+          <ColorButton
+            key={i}
             color={color}
             onClick={() => props.onColorSelect(color)}
           />
